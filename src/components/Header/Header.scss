@@ -1,0 +1,40 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 87%;
+    margin: 0 auto;
+
+
+    .logo{
+        margin-top: 40px;
+        width: 210px;
+    }
+
+    .nav{
+        margin: 57px 0 0 0;
+        padding: 0;
+    
+
+        ul{
+            display: flex;
+        }
+
+        li {
+            font-size: 24px;
+            list-style-type: none;
+            padding: 20px 0 20px 50px;
+          }
+
+        a {
+          color: #FF6060;
+          text-decoration: none;
+          
+
+            &:hover {
+                text-decoration: underline;
+              }
+        }
+    }
+}  
