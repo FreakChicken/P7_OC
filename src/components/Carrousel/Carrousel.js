@@ -10,7 +10,8 @@ function Carrousel() {
     // Récupération de l'ID du logement dans l'URL
     const params = useParams();
     const id = params.id;
-    // Récupération du tableau d'appartements (default), puis de l'appartement correspondant au bon ID (find), puis de ses photos (pictures)
+    // Récupération du tableau d'appartements (default), puis de l'appartement correspondant au bon ID (find),
+    //puis de ses photos (pictures)
     const apartmentPictures = apartments.default.find(
         (element) => element.id === id
     ).pictures;
@@ -79,7 +80,7 @@ function Carrousel() {
                     src={left_vector}
                     alt="fleche directionnelle"
                 />
-                <p>
+                <p className="picture_number">
                     {currentPicture + 1}/{picturesNumber}
                 </p>
 

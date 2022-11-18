@@ -46,7 +46,7 @@
     }
 }
 
-.host{
+.host_wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,5 +80,16 @@
         height: 36px;
         width: max-content;
         margin-top: 27px;
+    }
+}
+.collapses_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 87%;
+    margin: 25px auto;
+
+    .collapse{
+        width: 47%;
     }
 }
