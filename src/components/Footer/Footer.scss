@@ -14,5 +14,12 @@
     .txt{
         color: white;
         margin-top: 28px;
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer .txt{
+        font-size: 12px;
     }
 }

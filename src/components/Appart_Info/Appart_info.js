@@ -31,8 +31,11 @@ function Appart_info() {
                     <div className="appart_info_tags_wrapper">
                         {matchingAppart.tags.map((tag, index) => {
                             return (
-                                <div key={tag + index + id}>
-                                    <p className="appart_info_tags">{tag}</p>
+                                <div
+                                    className="appart_info_tags"
+                                    key={tag + index + id}
+                                >
+                                    <p>{tag}</p>
                                 </div>
                             );
                         })}

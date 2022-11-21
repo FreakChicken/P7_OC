@@ -6,6 +6,12 @@
     height: 340px;
     border-radius: 10px;
     position: relative;
+    transform: scale(1);
+    transition: transform 700ms;
+
+    &:hover{
+        transform: scale(1.05);
+    }
     
     .card_gradient{
         height: 100%;
@@ -40,6 +46,20 @@
         font-size: 18px;
         line-height: 26px;
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .card{
+        width: 335px;
+        height: 255px;
+        .card_title{
+            top: 188px;
+        }
+        
+        &:hover{
+            transform: none;
+        }
     }
 }
     

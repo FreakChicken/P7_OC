@@ -56,3 +56,24 @@
     font-weight: 500;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .carrousel{
+    width: 90%;
+    height: 255px;
+    margin: 25px auto 15px auto;
+
+    .picture_number{
+      display: none;
+    }
+    .carrousel_image{
+      border-radius: 10px;
+    }
+    .right_vector{
+      height: 20px;
+    }
+    .left_vector{
+      height: 20px;
+    }
+  }
+}
