@@ -12,6 +12,7 @@ function Appart_info() {
 
     // Condition pour gérer le cas ou l'id est incorrect afin de renvoyer vers la page d'erreur avec l'API "Navigate" de React Router
     if (matchingAppart === undefined) {
+        console.log(matchingAppart);
         return <Navigate to="/404" />;
     }
 
