@@ -1,3 +1,4 @@
+import React from "react";
 import "./Rating.scss";
 import { useParams } from "react-router-dom";
 import grey_star from "../../assets/grey_star.png";

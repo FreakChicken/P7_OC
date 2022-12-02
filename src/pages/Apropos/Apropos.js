@@ -9,20 +9,24 @@ const collapseContentArray = data;
 
 function Apropos() {
     return (
-        <div className="apropos_wrapper">
-            <div className="banner_apropos">
-                <Banner image={banner_img_apropos} />
+        <div className="page_layout">
+            <div className="apropos_wrapper">
+                <div className="banner_apropos">
+                    <Banner image={banner_img_apropos} />
+                </div>
+                <section className="collapses_wrapper_apropos">
+                    <div className="collapses">
+                        {collapseContentArray.map(({ title, id, content }) => (
+                            <Collapse
+                                title={title}
+                                id={id}
+                                content={content}
+                                key={title + id}
+                            />
+                        ))}
+                    </div>
+                </section>
             </div>
-            <section className="collapses_wrapper_apropos">
-                {collapseContentArray.map(({ title, id, content }) => (
-                    <Collapse
-                        title={title}
-                        id={id}
-                        content={content}
-                        key={title + id}
-                    />
-                ))}
-            </section>
         </div>
     );
 }

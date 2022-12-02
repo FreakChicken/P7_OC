@@ -1,4 +1,5 @@
 //import { Link } from "react-router-dom";
+import React from "react";
 import "./Footer.scss";
 import Logo_footer from "../../assets/logo_BnW.png";
 import { Link } from "react-router-dom";

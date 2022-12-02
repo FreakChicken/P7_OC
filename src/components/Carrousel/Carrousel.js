@@ -1,23 +1,14 @@
-import { useParams } from "react-router-dom";
+import React from "react";
 import { useState } from "react";
-import * as apartments from "../../data/apartments.json";
 import "./Carrousel.scss";
 import right_vector from "../../assets/right_vector.png";
 import left_vector from "../../assets/left_vector.png";
 
 // Composant Carrousel, modulable dans ses images affichables
-function Carrousel() {
-    // Récupération de l'ID du logement dans l'URL
-    const params = useParams();
-    const id = params.id;
-    // Récupération du tableau d'appartements (default), puis de l'appartement correspondant au bon ID (find),
-    //puis de ses photos (pictures)
-    const apartmentPictures = apartments.default.find(
-        (element) => element.id === id
-    ).pictures;
+function Carrousel({ pictures, id }) {
     // Initialisation du hook "useState"
     const [currentPicture, changePicture] = useState(0);
-    const picturesNumber = apartmentPictures.length;
+    const picturesNumber = pictures.length;
 
     /* Fonction permettant d'incrémenter l'image tout en revenant à la première en cas de fin de cycle,
     on écrit "picturesNumber -1" car contrairement à "currentPicture" ce n'est pas un tableau qui commence de 0 */
@@ -42,7 +33,7 @@ function Carrousel() {
     if (picturesNumber === 1) {
         return (
             <div className="carrousel">
-                {apartmentPictures.map((photos, index) => {
+                {pictures.map((photos, index) => {
                     return (
                         <div
                             className={
@@ -84,7 +75,7 @@ function Carrousel() {
                     {currentPicture + 1}/{picturesNumber}
                 </p>
 
-                {apartmentPictures.map((photos, index) => {
+                {pictures.map((photos, index) => {
                     // Affichage de l'image correspondante à l'itération en cours
                     return (
                         <div

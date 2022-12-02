@@ -1,3 +1,4 @@
+import React from "react";
 import "./Collapse.scss";
 import { useState } from "react";
 import vector from "../../assets/vector.png";

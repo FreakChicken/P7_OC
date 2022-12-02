@@ -25,3 +25,19 @@
         margin: 140px 0 0 0;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .error_div{
+
+        .error_404{
+            font-size: 96px;
+        }
+        .error_txt{
+            font-size: 18px;
+            text-align: center;
+        }
+        .error_link{
+            font-size: 14px;
+        }
+    }
+}

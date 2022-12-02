@@ -1,15 +1,28 @@
-import "./Logement.scss";
-import AppartInfo from "../../components/Appart_Info/Appart_info";
+import React from "react";
+import AppartInfo from "../../components/Appart_Info/AppartInfo";
 import Carrousel from "../../components/Carrousel/Carrousel";
+import { useParams } from "react-router-dom";
+import data from "../../data/apartments.json";
+import "./Logement.scss";
+import { Navigate } from "react-router-dom";
 
 function Logement() {
+    //définition des data de l'appartement concerné
+    const { id } = useParams();
+    const [matchingAppart] = React.useState(
+        data.find((appart) => appart.id === id)
+    );
+    // Condition pour gérer le cas ou l'id est incorrect afin de renvoyer vers la page d'erreur avec "useNavigate" de React Router
+    if (matchingAppart === undefined) {
+        return <Navigate to="/404" replace={true} />;
+    }
     return (
-        <div>
-            <div>
-                <Carrousel />
+        <div className="page_layout">
+            <div className="carrousel_wrapper">
+                <Carrousel pictures={matchingAppart?.pictures} id={id} />
             </div>
             <div>
-                <AppartInfo />
+                <AppartInfo data={matchingAppart} id={id} />
             </div>
         </div>
     );

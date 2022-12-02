@@ -3,6 +3,7 @@ import Banner from "../../components/Banner/Banner";
 import banner_img from "../../assets/Banner_img_home.png";
 import data from "../../data/apartments.json";
 import Card from "../../components/Card/Card";
+import React from "react";
 
 function Home() {
     return (
