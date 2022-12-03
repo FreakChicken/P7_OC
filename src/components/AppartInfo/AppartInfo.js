@@ -36,7 +36,7 @@ function AppartInfo({ data, id }) {
                         ></img>
                     </div>
                     <div className="host_stars">
-                        <Rating arrayToRate={data.rating} maxRate={"5"} />
+                        <Rating rate={data.rating} maxRate={5} />
                     </div>
                 </div>
             </div>
